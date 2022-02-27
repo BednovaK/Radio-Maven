@@ -47,7 +47,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(4);
-        rad.setNextStation();
+        rad.increaseStation();
 
 
         int expected = 5;
@@ -61,7 +61,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setToMaxStation();
-        rad.setNextStation();
+        rad.increaseStation();
 
 
         int expected = 0;
@@ -75,7 +75,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(3);
-        rad.setPrevStation();
+        rad.prevStation();
 
         int expected = 2;
         int actual = rad.getCurrentStation();
@@ -88,7 +88,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setToMinStation();
-        rad.setPrevStation();
+        rad.prevStation();
 
         int expected = 9;
         int actual = rad.getCurrentStation();

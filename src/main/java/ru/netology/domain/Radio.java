@@ -32,7 +32,7 @@ public class Radio {
         this.currentStation = currentStation;
     }
 
-    public void setNextStation() {
+    public void increaseStation() {
 
         if (currentStation < 9) {
             currentStation = currentStation + 1;
@@ -43,7 +43,7 @@ public class Radio {
     }
 
 
-    public void setPrevStation() {
+    public void prevStation() {
         if (currentStation > 1) {
             currentStation = currentStation - 1;
         }
