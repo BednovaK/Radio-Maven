@@ -60,7 +60,7 @@ public class RadioTest {
     public void nextMaxStation() {
         Radio rad = new Radio();
 
-        rad.setCurrentStation(9);
+        rad.setToMaxStation();
         rad.setNextStation();
 
 
@@ -87,7 +87,7 @@ public class RadioTest {
     public void prevMinStation() {
         Radio rad = new Radio();
 
-        rad.setCurrentStation(0);
+        rad.setToMinStation();
         rad.setPrevStation();
 
         int expected = 9;
@@ -183,4 +183,6 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+
+
 }

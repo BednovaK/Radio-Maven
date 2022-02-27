@@ -13,6 +13,14 @@ public class Radio {
         return volume;
     }
 
+    public void setToMaxStation() {
+        this.currentStation = 9;
+    }
+
+    public void setToMinStation() {
+        this.currentStation = 0;
+    }
+
 
     public void setCurrentStation(int currentStation) {
         if (currentStation > 9) {
@@ -30,7 +38,7 @@ public class Radio {
             currentStation = currentStation + 1;
         }
         if (currentStation >= 9) {
-            this.currentStation=0;
+            this.currentStation = 0;
         }
     }
 
@@ -40,7 +48,7 @@ public class Radio {
             currentStation = currentStation - 1;
         }
         if (currentStation == 0) {
-            this.currentStation=9;
+            this.currentStation = 9;
         }
     }
 
