@@ -22,7 +22,7 @@ public class RadioTest {
     public void setCurrentStationOverMax() {
         Radio rad = new Radio();
 
-        rad.setCurrentStation(11);
+        rad.setCurrentStation(10);
 
         int expected = 0;
         int actual = rad.getCurrentStation();
@@ -46,18 +46,18 @@ public class RadioTest {
     public void nextStation() {
         Radio rad = new Radio();
 
-        rad.setCurrentStation(5);
+        rad.setCurrentStation(4);
         rad.setNextStation();
 
 
-        int expected = 6;
+        int expected = 5;
         int actual = rad.getCurrentStation();
 
         assertEquals(expected, actual);
     }
 
     @Test
-    public void nextOverMaxStation() {
+    public void nextMaxStation() {
         Radio rad = new Radio();
 
         rad.setCurrentStation(9);
@@ -74,17 +74,17 @@ public class RadioTest {
     public void prevStation() {
         Radio rad = new Radio();
 
-        rad.setCurrentStation(5);
+        rad.setCurrentStation(3);
         rad.setPrevStation();
 
-        int expected = 4;
+        int expected = 2;
         int actual = rad.getCurrentStation();
 
         assertEquals(expected, actual);
     }
 
     @Test
-    public void prevBelowMinStation() {
+    public void prevMinStation() {
         Radio rad = new Radio();
 
         rad.setCurrentStation(0);
@@ -146,7 +146,7 @@ public class RadioTest {
     }
 
     @Test
-    public void increaseOverMaxVolume() {
+    public void increaseMaxVolume() {
         Radio rad = new Radio();
 
         rad.setCurrentVolume(10);
@@ -172,7 +172,7 @@ public class RadioTest {
     }
 
     @Test
-    public void lowerBelowMinVolume() {
+    public void lowerMinVolume() {
         Radio rad = new Radio();
 
         rad.setCurrentVolume(0);
