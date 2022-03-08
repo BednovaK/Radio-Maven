@@ -36,11 +36,13 @@ public class Radio {
 
         if (currentStation < 9) {
             currentStation = currentStation + 1;
+            return;
         }
-        if (currentStation >= 9) {
-            this.currentStation = 0;
-        }
+
+        this.currentStation = 0;
     }
+
+
 
 
     public void prevStation() {
